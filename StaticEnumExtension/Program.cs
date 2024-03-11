@@ -1,8 +1,4 @@
-﻿using Service;
-using System.Security.Principal;
-
-
-namespace StaticEnumExtension
+﻿namespace StaticEnumExtension
 {
     internal class Program
     {
@@ -24,11 +20,12 @@ namespace StaticEnumExtension
             //else Console.WriteLine(Constants.failedAttempt);
             #endregion
             #region Task2
-
-
-
-
-
+            //int num = 3;
+            //Console.WriteLine(num.Factorial());
+            #endregion
+            #region Task3
+            //string word = "Salam Kamran, Necesen KAMRAN.";
+            //Console.WriteLine(word.MatchCount("Kamran"));
             #endregion
         }
     }
