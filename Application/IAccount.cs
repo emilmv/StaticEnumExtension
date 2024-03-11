@@ -8,8 +8,8 @@ namespace Service
 {
     public interface IAccount
     {
-        bool checkRole(Account.Roles role);
-        public void login(string email, string password);
+        public bool checkRole(Account.Roles role);
+        public bool login(string email, string password);
     }
 
 }
