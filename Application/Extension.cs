@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 namespace StaticEnumExtension;
-internal static class Extension
+public static class Extension
 {
     public static int Factorial(this int value)
     {

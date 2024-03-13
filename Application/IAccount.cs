@@ -1,9 +1,10 @@
-﻿namespace Service
+﻿using static Service.Account;
+
+namespace Service
 {
     public interface IAccount
     {
-        public bool checkRole(Account.Roles role);
-        public bool login(string email, string password);
+        public void Login(string email, string password, Roles role);
     }
 
 }

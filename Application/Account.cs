@@ -7,18 +7,31 @@
         public string Password { get; set; }
 
 
-        public bool checkRole(Roles role)
-        {
-            if (role == Roles.SuperAdmin) return true;
-            else return false;
-        }
-
-        public bool login(string email,string password)
+        public void Login(string email, string password, Roles role)
         {
             if (email == Constants.correctMail && password == Constants.correctPassword)
-                return true;
-            else return false;
+            {
+                if (role == Roles.SuperAdmin)
+                {
+                    Console.WriteLine(Constants.sucessfulLogin);
+                }
+                else
+                {
+                    Console.WriteLine(Constants.noPermission);
+                }
+            }
+            else
+            {
+                Console.WriteLine(Constants.failedAttempt);
+            }
+
         }
+        private bool CheckRole(Roles role)
+        {
+            if (role == Roles.SuperAdmin) return true;
+            return false;
+        }
+
 
         public enum Roles
         {

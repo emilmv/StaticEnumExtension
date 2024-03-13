@@ -1,23 +1,22 @@
-﻿namespace StaticEnumExtension
+﻿using Service;
+using static Service.Account;
+
+namespace StaticEnumExtension
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             #region Task1
-            //Account account = new Account();
-            //account.Email = "test@code.edu.az";
-            //account.Password = "test12345";
-            //account.Role = Account.Roles.Admin;
-            //account.checkRole(account.Role);
-            //if (account.checkRole(account.Role))
-            //{
-            //    if (account.login(account.Email, account.Password))
-            //        Console.WriteLine(Constants.sucessfulLogin);
-            //}
-            //else if (account.login(account.Email, account.Password))
-            //    Console.WriteLine(Constants.noPermission);
-            //else Console.WriteLine(Constants.failedAttempt);
+            Console.WriteLine("enter email");
+            string ?email=Console.ReadLine();
+            Console.WriteLine("enter password");
+            string ?password=Console.ReadLine();
+            Account account = new Account();
+            account.Email = email;
+            account.Password = password;
+            account.Login(email, password, Roles.SuperAdmin);
+
             #endregion
             #region Task2
             //int num = 3;
